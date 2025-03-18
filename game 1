@@ -1,0 +1,10 @@
+document.getElementById('startGameBtn').addEventListener('click', function() {
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    let userGuess = prompt("Guess a number between 1 and 100");
+
+    if (parseInt(userGuess) === randomNumber) {
+        document.getElementById('gameArea').innerHTML = "Congratulations! You guessed the right number!";
+    } else {
+        document.getElementById('gameArea').innerHTML = "Sorry, the correct number was " + randomNumber + ". Try again!";
+    }
+});
